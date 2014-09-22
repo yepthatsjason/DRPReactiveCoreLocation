@@ -18,12 +18,10 @@ Pod::Spec.new do |s|
                        * Don't worry about the indent, we strip it!
                        DESC
   s.homepage         = "https://github.com/<GITHUB_USERNAME>/DRPStarterKit"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "Jason Ederle" => "jederle@fb.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DRPStarterKit.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.author           = { "Jason Ederle" => "jason.ederle@gmail.com" }
+  s.source           = { :path => "/Users/jederle/dropbox_personal/Projects/Private Pods/DRPStarterKit" }
+  s.social_media_url = 'https://facebook.com/jason.ederle'
+  
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
@@ -34,5 +32,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
+  
   # s.dependency 'AFNetworking', '~> 2.3'
 end

@@ -1,0 +1,14 @@
+PODS:
+  - DRPStarterKit (0.1.0)
+
+DEPENDENCIES:
+  - DRPStarterKit (from `../`)
+
+EXTERNAL SOURCES:
+  DRPStarterKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DRPStarterKit: 2b02fb5dfe5ce809fd13f29dad58d2a70979d082
+
+COCOAPODS: 0.33.1

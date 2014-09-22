@@ -20,9 +20,5 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Jason Ederle, jederle@fb.com
-
-## License
-
-DRPStarterKit is available under the MIT license. See the LICENSE file for more info.
+Jason Ederle, jason.ederle@gmail.com
 
