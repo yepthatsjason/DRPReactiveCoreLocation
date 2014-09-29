@@ -9,29 +9,33 @@
 
 Pod::Spec.new do |s|
   s.name             = "DRPStarterKit"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of DRPStarterKit."
+  s.version          = "1.0.0"
+  s.summary          = "Collection of iOS classes to jumpstart development of new projects"
   s.description      = <<-DESC
-                       An optional longer description of DRPStarterKit
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       This pod brings in a common classes that are generic and can be shared among
+                       different iOS apps.
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/DRPStarterKit"
   s.author           = { "Jason Ederle" => "jason.ederle@gmail.com" }
+  s.homepage         = "http://getatmos.com"
   s.source           = { :path => "/Users/jederle/dropbox_personal/Projects/Private Pods/DRPStarterKit" }
   s.social_media_url = 'https://facebook.com/jason.ederle'
   
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
+  s.source_files = 'Pod/Classes/*'
   s.resource_bundles = {
     'DRPStarterKit' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.public_header_files = 'Pod/Classes/*.h'
+  s.frameworks = 'UIKit'
+  s.dependency 'GoogleAnalytics-iOS-SDK'
+  s.dependency 'APAddressBook'
+  s.dependency 'ECPhoneNumberFormatter'
+  s.dependency 'MBProgressHUD'
+  s.dependency 'ReactiveCocoa'
+  s.dependency 'GPUImage'
+  s.dependency 'APAddressBook'
   
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

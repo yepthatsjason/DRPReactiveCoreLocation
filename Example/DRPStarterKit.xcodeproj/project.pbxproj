@@ -11,31 +11,7 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		81446AFF19CFCF9F00C7864E /* DRPActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446ACD19CFCF9F00C7864E /* DRPActionSheet.m */; };
-		81446B0019CFCF9F00C7864E /* DRPAddressBookInviteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446ACF19CFCF9F00C7864E /* DRPAddressBookInviteTableViewController.m */; };
-		81446B0119CFCF9F00C7864E /* DRPCenteredCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AD219CFCF9F00C7864E /* DRPCenteredCollectionViewFlowLayout.m */; };
-		81446B0219CFCF9F00C7864E /* DRPCrossFadeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AD419CFCF9F00C7864E /* DRPCrossFadeImageView.m */; };
-		81446B0319CFCF9F00C7864E /* DRPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AD619CFCF9F00C7864E /* DRPError.m */; };
-		81446B0419CFCF9F00C7864E /* DRPFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AD819CFCF9F00C7864E /* DRPFaceView.m */; };
-		81446B0519CFCF9F00C7864E /* DRPFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446ADA19CFCF9F00C7864E /* DRPFriendInfo.m */; };
-		81446B0619CFCF9F00C7864E /* DRPGoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446ADC19CFCF9F00C7864E /* DRPGoogleAnalytics.m */; };
-		81446B0719CFCF9F00C7864E /* DRPGradiantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446ADE19CFCF9F00C7864E /* DRPGradiantView.m */; };
-		81446B0819CFCF9F00C7864E /* DRPLoadingFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AE019CFCF9F00C7864E /* DRPLoadingFooterView.m */; };
-		81446B0919CFCF9F00C7864E /* DRPLocationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AE219CFCF9F00C7864E /* DRPLocationCache.m */; };
-		81446B0A19CFCF9F00C7864E /* DRPLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AE419CFCF9F00C7864E /* DRPLogging.m */; };
-		81446B0B19CFCF9F00C7864E /* DRPMemModelCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AE619CFCF9F00C7864E /* DRPMemModelCache.m */; };
-		81446B0C19CFCF9F00C7864E /* DRPParallaxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AE919CFCF9F00C7864E /* DRPParallaxTableViewController.m */; };
-		81446B0D19CFCF9F00C7864E /* DRPReactiveCoreLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AEB19CFCF9F00C7864E /* DRPReactiveCoreLocationManager.m */; };
-		81446B0E19CFCF9F00C7864E /* DRPRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AED19CFCF9F00C7864E /* DRPRoundedButton.m */; };
-		81446B0F19CFCF9F00C7864E /* DRPSearchSuggestionsDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AEF19CFCF9F00C7864E /* DRPSearchSuggestionsDisplayController.m */; };
-		81446B1019CFCF9F00C7864E /* DRPTableStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AF119CFCF9F00C7864E /* DRPTableStateView.m */; };
-		81446B1119CFCF9F00C7864E /* DRPTouchOrDragGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AF319CFCF9F00C7864E /* DRPTouchOrDragGestureRecognizer.m */; };
-		81446B1219CFCF9F00C7864E /* DRPUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AF519CFCF9F00C7864E /* DRPUtilities.m */; };
-		81446B1319CFCF9F00C7864E /* DRPViewBackedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AF719CFCF9F00C7864E /* DRPViewBackedTableViewController.m */; };
-		81446B1419CFCF9F00C7864E /* DRPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AF919CFCF9F00C7864E /* DRPWebViewController.m */; };
-		81446B1519CFCF9F00C7864E /* DRPWrapperCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AFB19CFCF9F00C7864E /* DRPWrapperCollectionViewCell.m */; };
 		81446B1619CFCF9F00C7864E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81446AFC19CFCF9F00C7864E /* Info.plist */; };
-		81446B1719CFCF9F00C7864E /* UITableView+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 81446AFE19CFCF9F00C7864E /* UITableView+Loading.m */; };
 		E59601B2934C42C5B4BBBAEB /* libPods-DRPStarterKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 294026BE53144A208EBB05E8 /* libPods-DRPStarterKit.a */; };
 /* End PBXBuildFile section */
 
@@ -51,57 +27,7 @@
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		81446ACC19CFCF9F00C7864E /* DRPActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPActionSheet.h; path = ../Pod/Classes/DRPActionSheet.h; sourceTree = "<group>"; };
-		81446ACD19CFCF9F00C7864E /* DRPActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPActionSheet.m; path = ../Pod/Classes/DRPActionSheet.m; sourceTree = "<group>"; };
-		81446ACE19CFCF9F00C7864E /* DRPAddressBookInviteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPAddressBookInviteTableViewController.h; path = ../Pod/Classes/DRPAddressBookInviteTableViewController.h; sourceTree = "<group>"; };
-		81446ACF19CFCF9F00C7864E /* DRPAddressBookInviteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPAddressBookInviteTableViewController.m; path = ../Pod/Classes/DRPAddressBookInviteTableViewController.m; sourceTree = "<group>"; };
-		81446AD019CFCF9F00C7864E /* DRPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPBase.h; path = ../Pod/Classes/DRPBase.h; sourceTree = "<group>"; };
-		81446AD119CFCF9F00C7864E /* DRPCenteredCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPCenteredCollectionViewFlowLayout.h; path = ../Pod/Classes/DRPCenteredCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		81446AD219CFCF9F00C7864E /* DRPCenteredCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPCenteredCollectionViewFlowLayout.m; path = ../Pod/Classes/DRPCenteredCollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		81446AD319CFCF9F00C7864E /* DRPCrossFadeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPCrossFadeImageView.h; path = ../Pod/Classes/DRPCrossFadeImageView.h; sourceTree = "<group>"; };
-		81446AD419CFCF9F00C7864E /* DRPCrossFadeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPCrossFadeImageView.m; path = ../Pod/Classes/DRPCrossFadeImageView.m; sourceTree = "<group>"; };
-		81446AD519CFCF9F00C7864E /* DRPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPError.h; path = ../Pod/Classes/DRPError.h; sourceTree = "<group>"; };
-		81446AD619CFCF9F00C7864E /* DRPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPError.m; path = ../Pod/Classes/DRPError.m; sourceTree = "<group>"; };
-		81446AD719CFCF9F00C7864E /* DRPFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPFaceView.h; path = ../Pod/Classes/DRPFaceView.h; sourceTree = "<group>"; };
-		81446AD819CFCF9F00C7864E /* DRPFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPFaceView.m; path = ../Pod/Classes/DRPFaceView.m; sourceTree = "<group>"; };
-		81446AD919CFCF9F00C7864E /* DRPFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPFriendInfo.h; path = ../Pod/Classes/DRPFriendInfo.h; sourceTree = "<group>"; };
-		81446ADA19CFCF9F00C7864E /* DRPFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPFriendInfo.m; path = ../Pod/Classes/DRPFriendInfo.m; sourceTree = "<group>"; };
-		81446ADB19CFCF9F00C7864E /* DRPGoogleAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPGoogleAnalytics.h; path = ../Pod/Classes/DRPGoogleAnalytics.h; sourceTree = "<group>"; };
-		81446ADC19CFCF9F00C7864E /* DRPGoogleAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPGoogleAnalytics.m; path = ../Pod/Classes/DRPGoogleAnalytics.m; sourceTree = "<group>"; };
-		81446ADD19CFCF9F00C7864E /* DRPGradiantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPGradiantView.h; path = ../Pod/Classes/DRPGradiantView.h; sourceTree = "<group>"; };
-		81446ADE19CFCF9F00C7864E /* DRPGradiantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPGradiantView.m; path = ../Pod/Classes/DRPGradiantView.m; sourceTree = "<group>"; };
-		81446ADF19CFCF9F00C7864E /* DRPLoadingFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPLoadingFooterView.h; path = ../Pod/Classes/DRPLoadingFooterView.h; sourceTree = "<group>"; };
-		81446AE019CFCF9F00C7864E /* DRPLoadingFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPLoadingFooterView.m; path = ../Pod/Classes/DRPLoadingFooterView.m; sourceTree = "<group>"; };
-		81446AE119CFCF9F00C7864E /* DRPLocationCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPLocationCache.h; path = ../Pod/Classes/DRPLocationCache.h; sourceTree = "<group>"; };
-		81446AE219CFCF9F00C7864E /* DRPLocationCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPLocationCache.m; path = ../Pod/Classes/DRPLocationCache.m; sourceTree = "<group>"; };
-		81446AE319CFCF9F00C7864E /* DRPLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPLogging.h; path = ../Pod/Classes/DRPLogging.h; sourceTree = "<group>"; };
-		81446AE419CFCF9F00C7864E /* DRPLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPLogging.m; path = ../Pod/Classes/DRPLogging.m; sourceTree = "<group>"; };
-		81446AE519CFCF9F00C7864E /* DRPMemModelCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPMemModelCache.h; path = ../Pod/Classes/DRPMemModelCache.h; sourceTree = "<group>"; };
-		81446AE619CFCF9F00C7864E /* DRPMemModelCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPMemModelCache.m; path = ../Pod/Classes/DRPMemModelCache.m; sourceTree = "<group>"; };
-		81446AE719CFCF9F00C7864E /* DRPMemModelCacheObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPMemModelCacheObjectProtocol.h; path = ../Pod/Classes/DRPMemModelCacheObjectProtocol.h; sourceTree = "<group>"; };
-		81446AE819CFCF9F00C7864E /* DRPParallaxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPParallaxTableViewController.h; path = ../Pod/Classes/DRPParallaxTableViewController.h; sourceTree = "<group>"; };
-		81446AE919CFCF9F00C7864E /* DRPParallaxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPParallaxTableViewController.m; path = ../Pod/Classes/DRPParallaxTableViewController.m; sourceTree = "<group>"; };
-		81446AEA19CFCF9F00C7864E /* DRPReactiveCoreLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPReactiveCoreLocationManager.h; path = ../Pod/Classes/DRPReactiveCoreLocationManager.h; sourceTree = "<group>"; };
-		81446AEB19CFCF9F00C7864E /* DRPReactiveCoreLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPReactiveCoreLocationManager.m; path = ../Pod/Classes/DRPReactiveCoreLocationManager.m; sourceTree = "<group>"; };
-		81446AEC19CFCF9F00C7864E /* DRPRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPRoundedButton.h; path = ../Pod/Classes/DRPRoundedButton.h; sourceTree = "<group>"; };
-		81446AED19CFCF9F00C7864E /* DRPRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPRoundedButton.m; path = ../Pod/Classes/DRPRoundedButton.m; sourceTree = "<group>"; };
-		81446AEE19CFCF9F00C7864E /* DRPSearchSuggestionsDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPSearchSuggestionsDisplayController.h; path = ../Pod/Classes/DRPSearchSuggestionsDisplayController.h; sourceTree = "<group>"; };
-		81446AEF19CFCF9F00C7864E /* DRPSearchSuggestionsDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPSearchSuggestionsDisplayController.m; path = ../Pod/Classes/DRPSearchSuggestionsDisplayController.m; sourceTree = "<group>"; };
-		81446AF019CFCF9F00C7864E /* DRPTableStateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPTableStateView.h; path = ../Pod/Classes/DRPTableStateView.h; sourceTree = "<group>"; };
-		81446AF119CFCF9F00C7864E /* DRPTableStateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPTableStateView.m; path = ../Pod/Classes/DRPTableStateView.m; sourceTree = "<group>"; };
-		81446AF219CFCF9F00C7864E /* DRPTouchOrDragGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPTouchOrDragGestureRecognizer.h; path = ../Pod/Classes/DRPTouchOrDragGestureRecognizer.h; sourceTree = "<group>"; };
-		81446AF319CFCF9F00C7864E /* DRPTouchOrDragGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPTouchOrDragGestureRecognizer.m; path = ../Pod/Classes/DRPTouchOrDragGestureRecognizer.m; sourceTree = "<group>"; };
-		81446AF419CFCF9F00C7864E /* DRPUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPUtilities.h; path = ../Pod/Classes/DRPUtilities.h; sourceTree = "<group>"; };
-		81446AF519CFCF9F00C7864E /* DRPUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPUtilities.m; path = ../Pod/Classes/DRPUtilities.m; sourceTree = "<group>"; };
-		81446AF619CFCF9F00C7864E /* DRPViewBackedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPViewBackedTableViewController.h; path = ../Pod/Classes/DRPViewBackedTableViewController.h; sourceTree = "<group>"; };
-		81446AF719CFCF9F00C7864E /* DRPViewBackedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPViewBackedTableViewController.m; path = ../Pod/Classes/DRPViewBackedTableViewController.m; sourceTree = "<group>"; };
-		81446AF819CFCF9F00C7864E /* DRPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPWebViewController.h; path = ../Pod/Classes/DRPWebViewController.h; sourceTree = "<group>"; };
-		81446AF919CFCF9F00C7864E /* DRPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPWebViewController.m; path = ../Pod/Classes/DRPWebViewController.m; sourceTree = "<group>"; };
-		81446AFA19CFCF9F00C7864E /* DRPWrapperCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRPWrapperCollectionViewCell.h; path = ../Pod/Classes/DRPWrapperCollectionViewCell.h; sourceTree = "<group>"; };
-		81446AFB19CFCF9F00C7864E /* DRPWrapperCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRPWrapperCollectionViewCell.m; path = ../Pod/Classes/DRPWrapperCollectionViewCell.m; sourceTree = "<group>"; };
 		81446AFC19CFCF9F00C7864E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Pod/Classes/Info.plist; sourceTree = "<group>"; };
-		81446AFD19CFCF9F00C7864E /* UITableView+Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Loading.h"; path = "../Pod/Classes/UITableView+Loading.h"; sourceTree = "<group>"; };
-		81446AFE19CFCF9F00C7864E /* UITableView+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Loading.m"; path = "../Pod/Classes/UITableView+Loading.m"; sourceTree = "<group>"; };
 		89653BEDFB86418A93AA458A /* DRPStarterKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DRPStarterKit.podspec; path = ../DRPStarterKit.podspec; sourceTree = "<group>"; };
 		93B1CAE0864D42A086C8DF4E /* Pods-DRPStarterKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRPStarterKit.xcconfig"; path = "Pods/Pods-DRPStarterKit.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,57 +110,7 @@
 		81446ACB19CFCF9200C7864E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				81446ACC19CFCF9F00C7864E /* DRPActionSheet.h */,
-				81446ACD19CFCF9F00C7864E /* DRPActionSheet.m */,
-				81446ACE19CFCF9F00C7864E /* DRPAddressBookInviteTableViewController.h */,
-				81446ACF19CFCF9F00C7864E /* DRPAddressBookInviteTableViewController.m */,
-				81446AD019CFCF9F00C7864E /* DRPBase.h */,
-				81446AD119CFCF9F00C7864E /* DRPCenteredCollectionViewFlowLayout.h */,
-				81446AD219CFCF9F00C7864E /* DRPCenteredCollectionViewFlowLayout.m */,
-				81446AD319CFCF9F00C7864E /* DRPCrossFadeImageView.h */,
-				81446AD419CFCF9F00C7864E /* DRPCrossFadeImageView.m */,
-				81446AD519CFCF9F00C7864E /* DRPError.h */,
-				81446AD619CFCF9F00C7864E /* DRPError.m */,
-				81446AD719CFCF9F00C7864E /* DRPFaceView.h */,
-				81446AD819CFCF9F00C7864E /* DRPFaceView.m */,
-				81446AD919CFCF9F00C7864E /* DRPFriendInfo.h */,
-				81446ADA19CFCF9F00C7864E /* DRPFriendInfo.m */,
-				81446ADB19CFCF9F00C7864E /* DRPGoogleAnalytics.h */,
-				81446ADC19CFCF9F00C7864E /* DRPGoogleAnalytics.m */,
-				81446ADD19CFCF9F00C7864E /* DRPGradiantView.h */,
-				81446ADE19CFCF9F00C7864E /* DRPGradiantView.m */,
-				81446ADF19CFCF9F00C7864E /* DRPLoadingFooterView.h */,
-				81446AE019CFCF9F00C7864E /* DRPLoadingFooterView.m */,
-				81446AE119CFCF9F00C7864E /* DRPLocationCache.h */,
-				81446AE219CFCF9F00C7864E /* DRPLocationCache.m */,
-				81446AE319CFCF9F00C7864E /* DRPLogging.h */,
-				81446AE419CFCF9F00C7864E /* DRPLogging.m */,
-				81446AE519CFCF9F00C7864E /* DRPMemModelCache.h */,
-				81446AE619CFCF9F00C7864E /* DRPMemModelCache.m */,
-				81446AE719CFCF9F00C7864E /* DRPMemModelCacheObjectProtocol.h */,
-				81446AE819CFCF9F00C7864E /* DRPParallaxTableViewController.h */,
-				81446AE919CFCF9F00C7864E /* DRPParallaxTableViewController.m */,
-				81446AEA19CFCF9F00C7864E /* DRPReactiveCoreLocationManager.h */,
-				81446AEB19CFCF9F00C7864E /* DRPReactiveCoreLocationManager.m */,
-				81446AEC19CFCF9F00C7864E /* DRPRoundedButton.h */,
-				81446AED19CFCF9F00C7864E /* DRPRoundedButton.m */,
-				81446AEE19CFCF9F00C7864E /* DRPSearchSuggestionsDisplayController.h */,
-				81446AEF19CFCF9F00C7864E /* DRPSearchSuggestionsDisplayController.m */,
-				81446AF019CFCF9F00C7864E /* DRPTableStateView.h */,
-				81446AF119CFCF9F00C7864E /* DRPTableStateView.m */,
-				81446AF219CFCF9F00C7864E /* DRPTouchOrDragGestureRecognizer.h */,
-				81446AF319CFCF9F00C7864E /* DRPTouchOrDragGestureRecognizer.m */,
-				81446AF419CFCF9F00C7864E /* DRPUtilities.h */,
-				81446AF519CFCF9F00C7864E /* DRPUtilities.m */,
-				81446AF619CFCF9F00C7864E /* DRPViewBackedTableViewController.h */,
-				81446AF719CFCF9F00C7864E /* DRPViewBackedTableViewController.m */,
-				81446AF819CFCF9F00C7864E /* DRPWebViewController.h */,
-				81446AF919CFCF9F00C7864E /* DRPWebViewController.m */,
-				81446AFA19CFCF9F00C7864E /* DRPWrapperCollectionViewCell.h */,
-				81446AFB19CFCF9F00C7864E /* DRPWrapperCollectionViewCell.m */,
 				81446AFC19CFCF9F00C7864E /* Info.plist */,
-				81446AFD19CFCF9F00C7864E /* UITableView+Loading.h */,
-				81446AFE19CFCF9F00C7864E /* UITableView+Loading.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -344,30 +220,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81446B0E19CFCF9F00C7864E /* DRPRoundedButton.m in Sources */,
-				81446B1519CFCF9F00C7864E /* DRPWrapperCollectionViewCell.m in Sources */,
-				81446B1719CFCF9F00C7864E /* UITableView+Loading.m in Sources */,
-				81446B0F19CFCF9F00C7864E /* DRPSearchSuggestionsDisplayController.m in Sources */,
-				81446B1419CFCF9F00C7864E /* DRPWebViewController.m in Sources */,
-				81446B1019CFCF9F00C7864E /* DRPTableStateView.m in Sources */,
-				81446B1119CFCF9F00C7864E /* DRPTouchOrDragGestureRecognizer.m in Sources */,
-				81446B0D19CFCF9F00C7864E /* DRPReactiveCoreLocationManager.m in Sources */,
-				81446B0C19CFCF9F00C7864E /* DRPParallaxTableViewController.m in Sources */,
-				81446B0419CFCF9F00C7864E /* DRPFaceView.m in Sources */,
-				81446B1319CFCF9F00C7864E /* DRPViewBackedTableViewController.m in Sources */,
-				81446B0219CFCF9F00C7864E /* DRPCrossFadeImageView.m in Sources */,
-				81446B0719CFCF9F00C7864E /* DRPGradiantView.m in Sources */,
-				81446B0819CFCF9F00C7864E /* DRPLoadingFooterView.m in Sources */,
-				81446B0919CFCF9F00C7864E /* DRPLocationCache.m in Sources */,
-				81446B0619CFCF9F00C7864E /* DRPGoogleAnalytics.m in Sources */,
-				81446AFF19CFCF9F00C7864E /* DRPActionSheet.m in Sources */,
-				81446B0019CFCF9F00C7864E /* DRPAddressBookInviteTableViewController.m in Sources */,
-				81446B0A19CFCF9F00C7864E /* DRPLogging.m in Sources */,
-				81446B0119CFCF9F00C7864E /* DRPCenteredCollectionViewFlowLayout.m in Sources */,
-				81446B0B19CFCF9F00C7864E /* DRPMemModelCache.m in Sources */,
-				81446B0519CFCF9F00C7864E /* DRPFriendInfo.m in Sources */,
-				81446B0319CFCF9F00C7864E /* DRPError.m in Sources */,
-				81446B1219CFCF9F00C7864E /* DRPUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
