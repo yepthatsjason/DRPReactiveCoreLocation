@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
                                                                                           target:self
                                                                                           action:@selector(cancelAction:)];
     
-    _sendButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Send\u2026"
+    _sendButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Send"
                                                        style:UIBarButtonItemStylePlain
                                                       target:self
                                                       action:@selector(inviteAction:)];
