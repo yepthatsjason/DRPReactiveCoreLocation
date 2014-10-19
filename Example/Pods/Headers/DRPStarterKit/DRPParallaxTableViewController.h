@@ -1,1 +1,1 @@
-../../../../Pod/Classes/DRPParallaxTableViewController.h
+../../../../../../../../dropbox_personal/Projects/Private Pods/DRPStarterKit/Pod/Classes/DRPParallaxTableViewController.h

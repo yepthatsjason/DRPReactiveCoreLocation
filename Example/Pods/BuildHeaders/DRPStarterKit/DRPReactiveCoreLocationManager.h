@@ -1,1 +1,1 @@
-../../../../Pod/Classes/DRPReactiveCoreLocationManager.h
+../../../../../../../../dropbox_personal/Projects/Private Pods/DRPStarterKit/Pod/Classes/DRPReactiveCoreLocationManager.h

@@ -1,9 +1,1 @@
-
-#import <UIKit/UIKit.h>
-
-@protocol DRPFaceViewDelegate;
-
-@interface DRPFaceView : UIView
-@property (weak, nonatomic) id<DRPFaceViewDelegate> delegate;
-@property (readonly, nonatomic) UIButton *button;
-@end
+../../../../../../../../dropbox_personal/Projects/Private Pods/DRPStarterKit/Pod/Classes/DRPFaceView.h

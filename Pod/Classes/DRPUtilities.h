@@ -83,4 +83,6 @@ extern const int DRPBlurLevelHigh;
 
 + (void)openLocationInGoogleMaps:(CLLocation *)location;
 
++ (NSString *)applicationName;
+
 @end

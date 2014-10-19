@@ -31,6 +31,7 @@ static const CGFloat kHUDMinShowTime = .5;
 
 static const double kMeteresPerMile = 1609.34;
 static const double kMeteresPerFoot = 0.3048;
+static const NSInteger kFeetPerMile = 5280;
 
 static NSString * const kGoogleMapsURIPrefix = @"comgooglemaps://";
 
@@ -157,6 +158,9 @@ void DRPMergeValueForKey(NSDictionary *srcDict, NSMutableDictionary *dstDict, id
 
 + (UIImage*)blurImage:(UIImage *)originalImage
 {
+  if (!originalImage) {
+    return nil;
+  }
   return [self gpuImageBlur:originalImage radius:DRPBlurLevelLow];
 }
 
@@ -316,14 +320,13 @@ void DRPMergeValueForKey(NSDictionary *srcDict, NSMutableDictionary *dstDict, id
 
 + (NSString *)getReadableStringInMilesForMeteres:(NSInteger)meteres
 {
-  int miles = (int)((float)meteres / 1609.34f);
-  
+  int miles = (int)((float)meteres / kMeteresPerMile);
   return [NSString stringWithFormat:@"%d mi", miles];
 }
 
 + (NSString *)formattedFriendlyDistanceFromMeteres:(CGFloat)meteres
 {
-  if ((double)meteres < (double)kMeteresPerMile) {
+  if ((NSInteger)meteres < (NSInteger)(kMeteresPerMile / 10)) {
     CGFloat feet = meteres / kMeteresPerFoot;
     return [NSString stringWithFormat:@"%d ft", (int)feet];
   } else {
@@ -350,6 +353,11 @@ void DRPMergeValueForKey(NSDictionary *srcDict, NSMutableDictionary *dstDict, id
   NSString *lon = @(location.coordinate.longitude).stringValue;
   NSString *nativeMapsStringURL = [NSString stringWithFormat:@"%@?q=%@,%@&center=%@,%@&zoom=20", kGoogleMapsURIPrefix, lat, lon, lat, lon];
   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:nativeMapsStringURL]];
+}
+
++ (NSString *)applicationName
+{
+  return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 }
 
 @end

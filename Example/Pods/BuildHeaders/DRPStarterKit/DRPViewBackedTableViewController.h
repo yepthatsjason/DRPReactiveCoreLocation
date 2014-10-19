@@ -1,1 +1,1 @@
-../../../../Pod/Classes/DRPViewBackedTableViewController.h
+../../../../../../../../dropbox_personal/Projects/Private Pods/DRPStarterKit/Pod/Classes/DRPViewBackedTableViewController.h

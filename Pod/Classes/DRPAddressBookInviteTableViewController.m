@@ -24,11 +24,12 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
   kDRPInviteTypeEmail
 };
 
-@interface DRPAddressBookInviteTableViewController () <MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
+@interface DRPAddressBookInviteTableViewController ()
+<MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate, UISearchDisplayDelegate>
 {
   NSArray *_people;
   APAddressBook *_addressBook;
-  NSMutableDictionary *_selectedIndexPaths;
+  NSMutableDictionary *_selectedPeople;
   UIImage *_checkEnabledImage;
   UIImage *_checkDisabledImage;
   MFMessageComposeViewController *_smsViewController;
@@ -36,6 +37,9 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
   ECPhoneNumberFormatter *_phoneNumberFormatter;
   UIBarButtonItem *_sendButtonItem;
   DRPInviteType _inviteType;
+  UISearchBar *_searchBar;
+  NSArray *_filteredPeople;
+  UISearchDisplayController *_searchController;
 }
 @end
 
@@ -45,7 +49,7 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
 {
   self = [super initWithStyle:style];
   if (self) {
-    _selectedIndexPaths = [NSMutableDictionary dictionary];
+    _selectedPeople = [NSMutableDictionary dictionary];
     _checkEnabledImage = [UIImage imageNamed:@"check_enabled"];
     _checkDisabledImage = [UIImage imageNamed:@"check_disabled"];
     
@@ -88,7 +92,8 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
 - (void)loadPeopleFromAddressBook
 {
   _addressBook = [[APAddressBook alloc] init];
-  _addressBook.fieldsMask = APContactFieldFirstName | APContactFieldLastName | APContactFieldPhones | APContactFieldEmails;
+  _addressBook.fieldsMask = APContactFieldFirstName | APContactFieldLastName |
+                            APContactFieldPhones | APContactFieldEmails | APContactFieldRecordID;
   NSMutableDictionary *discoveredUsers = [NSMutableDictionary dictionary];
   
   _addressBook.filterBlock = ^(APContact *contact) {
@@ -133,6 +138,7 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
     }
     
     _people = [contacts copy];
+    _filteredPeople = [self getPeopleFilteredWithPhrase:nil];
     [self.tableView reloadData];
   }];
 }
@@ -144,8 +150,7 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
   _smsViewController.body = _message;
   
   NSMutableArray *recipients = [NSMutableArray array];
-  for (NSIndexPath *indexPath in _selectedIndexPaths.allKeys) {
-    APContact *contact = _people[indexPath.row];
+  for (APContact *contact in _selectedPeople.allValues) {
     [recipients addObject:contact.phones.firstObject];
   }
   
@@ -162,8 +167,7 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
   [_emailViewController setSubject:_emailSubject];
   
   NSMutableArray *emails = [NSMutableArray array];
-  for (NSIndexPath *indexPath in _selectedIndexPaths) {
-    APContact *contact = _people[indexPath.row];
+  for (APContact *contact in _selectedPeople.allValues) {
     NSString *email = [self getContactTypeInfo:contact];
     if (email) {
       [emails addObject:email];
@@ -177,7 +181,7 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
 
 - (void)prepareCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath
 {
-  APContact *person = _people[indexPath.row];
+  APContact *person = _filteredPeople[indexPath.row];
   NSString *firstName = person.firstName;
   NSString *lastName = person.lastName;
   NSString *fullName = nil;
@@ -196,13 +200,51 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
     cell.accessoryView = [[UIImageView alloc] initWithFrame:imageFrame];
   }
   
-  if ([_selectedIndexPaths objectForKey:indexPath]) {
+  if ([_selectedPeople objectForKey:person.recordID]) {
     [(UIImageView *)cell.accessoryView setImage:_checkEnabledImage];
   } else {
     [(UIImageView *)cell.accessoryView setImage:_checkDisabledImage];
   }
   
   [cell setNeedsLayout];
+}
+
+- (NSArray *)getPeopleFilteredWithPhrase:(NSString *)phrase
+{
+  if (!phrase || !phrase.length) {
+    return [_people copy];
+  }
+  
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(firstName contains[cd] %@) OR (lastName contains[cd] %@)", phrase, phrase];
+  NSArray *people = [_people filteredArrayUsingPredicate:predicate];
+  return people ?: @[];
+}
+
+- (void)updateResultsForPhrase:(NSString *)phrase
+{
+  _filteredPeople = [self getPeopleFilteredWithPhrase:phrase];
+  [self.tableView reloadData];
+}
+
+#pragma mark View Controller
+
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  
+  _searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
+  self.tableView.tableHeaderView = _searchBar;
+  
+  _searchController = [[UISearchDisplayController alloc] initWithSearchBar:_searchBar
+                                                        contentsController:self];
+  
+  _searchController.delegate = self;
+  _searchController.searchResultsDataSource = self;
+  _searchController.searchResultsDelegate = self;
+  
+  _searchBar.showsCancelButton = NO;
+  _searchBar.showsScopeBar = NO;
+  _searchBar.showsBookmarkButton = NO;
 }
 
 #pragma mark Actions
@@ -232,7 +274,7 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return _people.count;
+  return _filteredPeople.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -258,26 +300,34 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
   
   [self prepareCell:cell indexPath:indexPath];
   
-  CGSize size = [cell sizeThatFits:CGSizeMake(CGRectGetWidth(self.tableView.bounds), CGFLOAT_MAX)];
+  CGSize size = [cell sizeThatFits:CGSizeMake(CGRectGetWidth(tableView.bounds), CGFLOAT_MAX)];
   return size.height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   // toggle the selection state
-  if ([_selectedIndexPaths objectForKey:indexPath]) {
-    [_selectedIndexPaths removeObjectForKey:indexPath];
+  APContact *contact = _filteredPeople[indexPath.row];
+  if ([_selectedPeople objectForKey:contact.recordID]) {
+    [_selectedPeople removeObjectForKey:contact.recordID];
   } else {
-    [_selectedIndexPaths setObject:@YES forKey:indexPath];
+    [_selectedPeople setObject:contact forKey:contact.recordID];
   }
   
-  if (_selectedIndexPaths.count) {
+  if (_selectedPeople.count) {
     self.navigationItem.rightBarButtonItem = _sendButtonItem;
   } else {
     self.navigationItem.rightBarButtonItem = nil;
   }
   
-  [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+  
+  if ([_searchController isActive]) {
+    _searchController.searchBar.text = nil;
+    [_searchController setActive:NO animated:YES];
+    [self updateResultsForPhrase:nil];
+  } else {
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+  }
 }
 
 #pragma mark SMS Message Delegate
@@ -325,6 +375,19 @@ typedef NS_ENUM(NSInteger, DRPInviteType)
       [self dismissViewControllerAnimated:YES completion:nil];
     }
   }];
+}
+
+#pragma mark UISearchDisplayDelegate
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+  [self updateResultsForPhrase:searchString];
+  return YES;
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
+{
+  [self updateResultsForPhrase:nil];
 }
 
 @end
