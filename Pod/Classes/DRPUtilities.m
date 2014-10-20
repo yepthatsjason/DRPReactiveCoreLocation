@@ -360,4 +360,17 @@ void DRPMergeValueForKey(NSDictionary *srcDict, NSMutableDictionary *dstDict, id
   return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 }
 
++ (BOOL)showedTutorialWithName:(NSString *)tutorialName
+{
+  DRPRequireAndReturnValue(tutorialName, NO, kDRPLogError, @"Can't check if nil tutorial was showed");
+  return [[NSUserDefaults standardUserDefaults] boolForKey:tutorialName];
+}
+
++ (void)setShowedTutorialWithName:(NSString *)tutorialName showed:(BOOL)didShow
+{
+  DRPRequireAndReturn(tutorialName, kDRPLogError, @"Can't track that nil tutorial was showed");
+  [[NSUserDefaults standardUserDefaults] setBool:didShow forKey:tutorialName];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 @end

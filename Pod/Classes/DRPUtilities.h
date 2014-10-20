@@ -85,4 +85,8 @@ extern const int DRPBlurLevelHigh;
 
 + (NSString *)applicationName;
 
++ (BOOL)showedTutorialWithName:(NSString *)tutorialName;
+
++ (void)setShowedTutorialWithName:(NSString *)tutorialName showed:(BOOL)didShow;
+
 @end
