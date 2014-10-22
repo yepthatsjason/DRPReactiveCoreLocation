@@ -1,1 +1,1 @@
-../../../../../../../../dropbox_personal/Projects/Private Pods/DRPStarterKit/Pod/Classes/DRPSearchSuggestionsDisplayController.h
+../../../../Pod/Classes/DRPSearchSuggestionsDisplayController.h

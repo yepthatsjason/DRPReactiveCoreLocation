@@ -1,1 +1,1 @@
-../../../../../../../../dropbox_personal/Projects/Private Pods/DRPStarterKit/Pod/Classes/DRPTouchOrDragGestureRecognizer.h
+../../../../Pod/Classes/DRPTouchOrDragGestureRecognizer.h

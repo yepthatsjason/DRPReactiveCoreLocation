@@ -1,1 +1,10 @@
-../../GPUImage/framework/Source/GPUImageVoronoiConsumerFilter.h
+#import "GPUImageTwoInputFilter.h"
+
+@interface GPUImageVoronoiConsumerFilter : GPUImageTwoInputFilter 
+{
+    GLint sizeUniform;
+}
+
+@property (nonatomic, readwrite) CGSize sizeInPixels;
+
+@end

@@ -1,1 +1,5 @@
-../../GPUImage/framework/Source/GPUImageHalftoneFilter.h
+#import "GPUImagePixellateFilter.h"
+
+@interface GPUImageHalftoneFilter : GPUImagePixellateFilter
+
+@end

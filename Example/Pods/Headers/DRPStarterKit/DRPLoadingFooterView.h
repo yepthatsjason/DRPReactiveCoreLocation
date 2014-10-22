@@ -1,1 +1,1 @@
-../../../../../../../../dropbox_personal/Projects/Private Pods/DRPStarterKit/Pod/Classes/DRPLoadingFooterView.h
+../../../../Pod/Classes/DRPLoadingFooterView.h

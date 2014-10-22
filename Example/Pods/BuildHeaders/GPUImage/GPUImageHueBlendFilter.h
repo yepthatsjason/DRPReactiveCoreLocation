@@ -1,1 +1,5 @@
-../../GPUImage/framework/Source/GPUImageHueBlendFilter.h
+#import "GPUImageTwoInputFilter.h"
+
+@interface GPUImageHueBlendFilter : GPUImageTwoInputFilter
+
+@end
