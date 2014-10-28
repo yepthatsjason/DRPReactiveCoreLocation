@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DRPCrossFadeImageView : UIImageView
+typedef UIImage* (^DRPCrossFadeProcessingBlock)(UIImage * rawImage);
+
+@interface DRPCrossFadeImageView : UIView
 @property (readwrite) CGFloat crossFadeDuration;
+@property (copy, nonatomic) DRPCrossFadeProcessingBlock processingBlock;
+
+// this is integrated with SDWebImage to download the URL and crossfade we if image isn't cached
+- (void)setImageWithURL:(NSURL *)url;
 
 @end

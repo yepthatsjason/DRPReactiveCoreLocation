@@ -9,13 +9,15 @@
 #import "DRPCrossFadeImageView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <DRPLogging.h>
+#import <SDWebImage/SDWebImageManager.h>
+#import <SDWebImage/SDImageCache.h>
 
 static const CGFloat DRPDefaultCrossFadeDuration = .4;
-static const NSTimeInterval DRPFadeThreashold = .1;
 
 @interface DRPCrossFadeImageView() {
   UIImageView *_contentImageView;
-  NSDate *_dateImageCleared;
+  NSString *_currentImageKey;
+  id<SDWebImageOperation> _downloadOperation;
 }
 @end
 
@@ -29,87 +31,107 @@ static const NSTimeInterval DRPFadeThreashold = .1;
     self.backgroundColor = [UIColor lightGrayColor];
     _contentImageView = [[UIImageView alloc] initWithFrame:self.bounds];
     _contentImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    _contentImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:_contentImageView];
   }
   return self;
 }
 
-- (void)setContentMode:(UIViewContentMode)contentMode
+- (void)setImageWithURL:(NSURL *)url;
 {
-  [super setContentMode:contentMode];
-  _contentImageView.contentMode = contentMode;
-}
-
-- (BOOL)isImage:(UIImage *)image1 equalToImage:(UIImage *)image2
-{
-  if (!image1 || !image2) {
-    return NO;
+  NSString *cacheKey = nil;
+  
+  if (url) {
+    cacheKey = [[SDWebImageManager sharedManager] cacheKeyForURL:url];
   }
   
-  if (image1 == image2) {
-    return YES;
-  } else {
-    return NO;
+  // check if we're already showing this image
+  if (([cacheKey isEqualToString:_currentImageKey]) ||
+      (!cacheKey && !_currentImageKey))
+  {
+    return;
   }
-}
 
-- (UIImage *)image
-{
-  return _contentImageView.image;
-}
-
-- (void)setImage:(UIImage *)newImage
-{
-  if (newImage == _contentImageView.image) {
-    if (!newImage) {
-      _dateImageCleared = [NSDate date];
-    }
+  // cancel and pending downloads
+  if (_downloadOperation) {
+    [_downloadOperation cancel];
+    _downloadOperation = nil;
+  }
+  
+  _currentImageKey = cacheKey;
+  
+  // if nil just clear the image
+  if (!cacheKey) {
+    [self _setImageWithoutCrossFade:nil];
+    [_contentImageView setNeedsDisplay];
+    [self setNeedsDisplay];
     return;
   }
   
-  BOOL isReadyForTransition = NO;
-  
-  if (newImage) {
-    NSTimeInterval nowTime = [[NSDate date] timeIntervalSince1970];
-    NSTimeInterval timeDiff = nowTime - _dateImageCleared.timeIntervalSince1970;
-    
-    // if the image data arrives really quickly just set it immediately
-    if (_contentImageView.image == nil && timeDiff > DRPFadeThreashold) {
-      isReadyForTransition = YES;
+  [[[SDWebImageManager sharedManager] imageCache] queryDiskCacheForKey:cacheKey done:^(UIImage *image, SDImageCacheType cacheType) {
+    if (image) {
+      [self _setImageWithoutCrossFade:image];
+    } else {
+      [self _downloadImage:url crossfade:YES];
     }
-  } else {
-    _dateImageCleared = [NSDate date];
-  }
+  }];
+}
 
-  if (isReadyForTransition) {
-    if (_contentImageView.image) {
-      NSLog(@"BUG -- why are we cross fading between images?!?!");
+- (void)_downloadImage:(NSURL *)url crossfade:(BOOL)crossfade
+{
+  SDWebImageCompletionWithFinishedBlock completion =
+  ^(UIImage *downloadedImage, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL)
+  {
+    if (!finished) {
+      return;
     }
-    [self _setImageWithCrossFade:newImage];
-  } else {
-    [self _setImageWithoutCrossFade:newImage];
-  }
+    
+    if (crossfade) {
+      [self _setImageWithCrossFade:downloadedImage];
+    } else {
+      [self _setImageWithoutCrossFade:downloadedImage];
+    }
+    _downloadOperation = nil;
+  };
   
-  [_contentImageView setNeedsDisplay];
-  [self setNeedsDisplay];
+  [self _setImageWithoutCrossFade:nil];
+  [[SDWebImageManager sharedManager] downloadImageWithURL:url
+                                                  options:0
+                                                 progress:nil
+                                                completed:completion];
 }
 
 - (void)_setImageWithCrossFade:(UIImage *)newImage
 {
   DRPAssertIsMainThread();
   
-  _contentImageView.image = newImage;
+  UIImage *processedImage = newImage;
+  if (_processingBlock) {
+    processedImage = _processingBlock(newImage);
+  }
+  
+  _contentImageView.image = processedImage;
   _contentImageView.alpha = 0;
   [UIView animateWithDuration:_crossFadeDuration animations:^{
     _contentImageView.alpha = 1;
   }];
 }
 
-- (void)_setImageWithoutCrossFade:(UIImage *)image
+- (void)_setImageWithoutCrossFade:(UIImage *)newImage
 {
-  _contentImageView.image = image;
-  _contentImageView.alpha = image ? 1 : 0;
+  UIImage *processedImage = newImage;
+  if (_processingBlock) {
+    processedImage = _processingBlock(newImage);
+  }
+  
+  _contentImageView.image = processedImage;
+  _contentImageView.alpha = processedImage ? 1 : 0;
   [_contentImageView setNeedsDisplay];
+}
+
+- (UIImageView *)contentImageView
+{
+  return _contentImageView;
 }
 
 @end
