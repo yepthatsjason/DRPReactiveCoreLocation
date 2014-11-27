@@ -1,4 +1,0 @@
-
-target 'DRPStarterKit', :exclusive => true do
-  pod 'DRPStarterKit', :path => '~/dropbox_personal/Projects/Private Pods/DRPStarterKit'
-end

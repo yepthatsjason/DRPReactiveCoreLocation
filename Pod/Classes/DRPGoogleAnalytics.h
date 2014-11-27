@@ -17,7 +17,8 @@
 // this must be called once before sharedInstance can be used
 + (void)setupAnalyticsWithKey:(NSString *)key
                      logLevel:(GAILogLevel)logLevel
-              trackExceptions:(BOOL)trackExceptions;
+              trackExceptions:(BOOL)trackExceptions
+                    trackIDFA:(BOOL)trackIDFA;
 
 // log action
 - (void)logAction:(NSString *)action

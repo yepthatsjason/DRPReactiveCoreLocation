@@ -43,11 +43,13 @@ DRPGoogleAnalytics *_gAnalytics = nil;
 + (void)setupAnalyticsWithKey:(NSString *)key
                      logLevel:(GAILogLevel)logLevel
               trackExceptions:(BOOL)trackExceptions
+                    trackIDFA:(BOOL)trackIDFA
 {
   [GAI sharedInstance].trackUncaughtExceptions = trackExceptions;
   [GAI sharedInstance].dispatchInterval = kDefaultDispatchInterval;
   [[[GAI sharedInstance] logger] setLogLevel:logLevel];
   [[GAI sharedInstance] trackerWithTrackingId:key];
+  [[[GAI sharedInstance] defaultTracker] setAllowIDFACollection:trackIDFA];
   
   _gAnalytics = [[DRPGoogleAnalytics alloc] init];
 }

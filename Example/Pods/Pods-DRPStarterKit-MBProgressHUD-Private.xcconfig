@@ -1,5 +1,0 @@
-#include "Pods-DRPStarterKit-MBProgressHUD.xcconfig"
-GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/MBProgressHUD" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/APAddressBook" "${PODS_ROOT}/Headers/DRPStarterKit" "${PODS_ROOT}/Headers/ECPhoneNumberFormatter" "${PODS_ROOT}/Headers/GPUImage" "${PODS_ROOT}/Headers/GoogleAnalytics-iOS-SDK" "${PODS_ROOT}/Headers/MBProgressHUD" "${PODS_ROOT}/Headers/ReactiveCocoa" "${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa"
-OTHER_LDFLAGS = -ObjC ${PODS_DRPSTARTERKIT_MBPROGRESSHUD_OTHER_LDFLAGS}
-PODS_ROOT = ${SRCROOT}

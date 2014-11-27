@@ -37,5 +37,7 @@ Pod::Spec.new do |s|
   s.dependency 'ReactiveCocoa'
   s.dependency 'GPUImage'
   s.dependency 'APAddressBook'
+  s.dependency 'SDWebImage'
+  s.dependency 'AFNetworking'
   
 end
