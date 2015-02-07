@@ -1,9 +1,9 @@
-# DRPStarterKit
+# DRPReactiveCoreLocation
 
-[![CI Status](http://img.shields.io/travis/Jason Ederle/DRPStarterKit.svg?style=flat)](https://travis-ci.org/Jason Ederle/DRPStarterKit)
-[![Version](https://img.shields.io/cocoapods/v/DRPStarterKit.svg?style=flat)](http://cocoadocs.org/docsets/DRPStarterKit)
-[![License](https://img.shields.io/cocoapods/l/DRPStarterKit.svg?style=flat)](http://cocoadocs.org/docsets/DRPStarterKit)
-[![Platform](https://img.shields.io/cocoapods/p/DRPStarterKit.svg?style=flat)](http://cocoadocs.org/docsets/DRPStarterKit)
+[![CI Status](http://img.shields.io/travis/Jason Ederle/DRPReactiveCoreLocation.svg?style=flat)](https://travis-ci.org/Jason Ederle/DRPReactiveCoreLocation)
+[![Version](https://img.shields.io/cocoapods/v/DRPReactiveCoreLocation.svg?style=flat)](http://cocoadocs.org/docsets/DRPReactiveCoreLocation)
+[![License](https://img.shields.io/cocoapods/l/DRPReactiveCoreLocation.svg?style=flat)](http://cocoadocs.org/docsets/DRPReactiveCoreLocation)
+[![Platform](https://img.shields.io/cocoapods/p/DRPReactiveCoreLocation.svg?style=flat)](http://cocoadocs.org/docsets/DRPReactiveCoreLocation)
 
 ## Usage
 
@@ -13,10 +13,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-DRPStarterKit is available through [CocoaPods](http://cocoapods.org). To install
+DRPReactiveCoreLocation is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod "DRPStarterKit"
+    pod "DRPReactiveCoreLocation"
 
 ## Author
 
