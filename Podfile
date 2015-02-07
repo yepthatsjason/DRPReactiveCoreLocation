@@ -1,8 +1,3 @@
-platform :ios, '7.0'
+platform :ios, '8.0'
 
-pod 'GoogleAnalytics-iOS-SDK'
-pod 'MBProgressHUD'
-pod 'ReactiveCocoa'
-pod 'GPUImage'
-pod 'APAddressBook'
-pod 'ECPhoneNumberFormatter'
+pod 'ReactiveCocoa' '< 3'

@@ -20,5 +20,5 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Jason Ederle, jason.ederle@gmail.com
+Jason Ederle, jason@funly.io
 
