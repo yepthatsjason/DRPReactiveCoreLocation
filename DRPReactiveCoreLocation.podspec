@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DRPReactiveCoreLocation"
-  s.version          = "1.0.2"
+  s.version          = "1.0.3"
   s.summary          = "ReactiveCocoa CoreLocation interface"
   s.description      = <<-DESC
                        ReactiveCocoa interface to CoreLocation. This gives you a signal
