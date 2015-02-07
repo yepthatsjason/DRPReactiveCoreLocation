@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
                        to handle location and permission change events with.
                        DESC
   s.author           = { "Jason Ederle" => "jason@funly.io" }
-  s.homepage         = "http://funly.io"
+  s.license          = 'MIT'
+  s.homepage         = "https://github.com/yepthatsjason/DRPReactiveCoreLocation"
   s.source           = { :git => "https://github.com/yepthatsjason/DRPReactiveCoreLocation.git", :tag => s.version.to_s }
   s.social_media_url = ''
   
