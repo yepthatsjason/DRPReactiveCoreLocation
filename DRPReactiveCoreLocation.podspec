@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DRPReactiveCoreLocation"
-  s.version          = "1.0.3"
+  s.version          = "1.0.4"
   s.summary          = "ReactiveCocoa CoreLocation interface"
   s.description      = <<-DESC
                        ReactiveCocoa interface to CoreLocation. This gives you a signal
@@ -19,15 +19,9 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.homepage         = "https://github.com/yepthatsjason/DRPReactiveCoreLocation"
   s.source           = { :git => "https://github.com/yepthatsjason/DRPReactiveCoreLocation.git", :tag => s.version.to_s }
-  
   s.platform     = :ios, '7.0'
   s.requires_arc = true
-
   s.source_files = 'Pod/Classes/*'
-  s.resource_bundles = {
-    'DRPReactiveLocation' => ['Pod/Assets/*.png']
-  }
-
   s.public_header_files = 'Pod/Classes/*.h'
   s.frameworks = 'UIKit'
   s.dependency 'ReactiveCocoa'
